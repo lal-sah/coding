@@ -1,5 +1,4 @@
 
-
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-public class HelloWorld {
+public class Playground {
 
 	// public class Palindrome {
 	public static boolean isPalindrome(String word) {
@@ -438,22 +437,13 @@ public class HelloWorld {
 		});
 
 		System.out.println("Stream API");
-		numbers
-			.stream()
-			.filter(n -> n % 2 == 1)
-			.forEach(n -> System.out.println(n));
-		
+		numbers.stream().filter(n -> n % 2 == 1).forEach(n -> System.out.println(n));
+
 		System.out.println("Stream API");
-		numbers
-			.stream()
-			.filter(n -> n % 2 == 1)
-			.forEach(System.out::println);
-		
+		numbers.stream().filter(n -> n % 2 == 1).forEach(System.out::println);
+
 		System.out.println("Parallel streaming...");
-		numbers
-			.parallelStream()
-			.filter(n -> n % 2 == 1)
-			.forEach(System.out::println);
+		numbers.parallelStream().filter(n -> n % 2 == 1).forEach(System.out::println);
 
 		MyInterface mi = new MyImpl();
 		mi.basics();
