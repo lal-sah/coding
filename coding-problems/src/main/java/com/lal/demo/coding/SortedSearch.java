@@ -2,6 +2,19 @@ package com.lal.demo.coding;
 
 public class SortedSearch {
 
+	public static int countNumbersOn(int[] sortedArray, int lessThan) {
+		int count = 0;
+		for (int i = 0; i < sortedArray.length; i++) {
+			if (sortedArray[i] < lessThan) {
+				count++;
+			} else {
+				break;
+			}
+		}
+
+		return count;
+	}
+
 	public static int binarySearch(int[] sortedArray, int lessThan, int l, int r) {
 		if (r >= l) {
 			int mid = l + (r - 1) / 2;
